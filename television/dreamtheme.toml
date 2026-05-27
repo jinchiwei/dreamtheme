@@ -1,0 +1,32 @@
+# dreamTheme — Jin's personal branding
+# turquoise (#7FFF00), deeppink (#FF1493), amber (#F0C840)
+# blueviolet (#8A2BE2), mediumorchid (#BA55D3), coral (#FF7F50)
+
+# general
+border_fg = '#FF1493'
+text_fg = '#c8c8d0'
+dimmed_text_fg = '#7a7a8c'
+
+# input
+input_text_fg = '#c8c8d0'
+result_count_fg = '#FF7F50'
+
+# results
+result_name_fg = '#F0C840'
+result_line_number_fg = '#7a7a8c'
+result_value_fg = '#c8c8d0'
+selection_fg = '#0a0a0a'
+selection_bg = '#40E0D0'
+match_fg = '#8A2BE2'
+
+# preview
+preview_title_fg = '#FF1493'
+
+# modes
+channel_mode_fg = '#8A2BE2'
+channel_mode_bg = '#40E0D0'
+remote_control_mode_fg = '#0a0a0a'
+remote_control_mode_bg = '#FF1493'
+action_picker_mode_fg = '#0a0a0a'
+action_picker_mode_bg = '#F0C840'
+send_to_channel_mode_fg = '#40E0D0'

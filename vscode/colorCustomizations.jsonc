@@ -1,0 +1,24 @@
+// dreamtheme — VS Code
+//
+// Built as overrides on top of the "Andromeda Italic" base theme (not a
+// standalone extension). Merge these keys into your User settings.json.
+{
+  "workbench.colorTheme": "Andromeda Italic",
+  "editor.fontFamily": "'Geist Mono', '0xProto', 'iA Writer Mono S', 'MonoLisa', 'SF Mono', 'Martian Mono', 'Roboto Mono', 'JetBrains Mono', Cousine, Consolas, 'Courier New', monospace",
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#FF20A0",
+    "editorBracketHighlight.foreground2": "#FFDC22",
+    "editorBracketHighlight.foreground3": "#00e8c6",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#7700ff",
+    "editor.selectionBackground": "#df006c",
+    "editor.selectionHighlightBackground": "#df006cfe",
+    "editorCursor.foreground": "#03fcf0",
+    "notebook.cellBorderColor": "#464c59",
+    "terminalCursor.foreground": "#03fcf0",
+    "titleBar.activeForeground": "#03fcb1",
+    "list.activeSelectionForeground": "#03fcb1",
+    "list.inactiveSelectionForeground": "#03fcb1",
+    "sideBarTitle.foreground": "#03fcb1",
+    "tab.activeForeground": "#03fcb1"
+  }
+}

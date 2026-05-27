@@ -1,0 +1,186 @@
+/* Autofeeder color scheme: cyan > deeppink > gold > blueviolet */
+/* High specificity to override AnuPpuccin theme */
+
+/* Page title (inline title) - Turquoise */
+body .inline-title {
+  color: #40E0D0 !important;
+  font-family: "Geist Mono", Consolas, monospace !important;
+}
+
+body .markdown-rendered h1,
+body .markdown-source-view .cm-header-1 {
+  color: #40E0D0 !important;
+  font-family: "Geist Mono", Consolas, monospace !important;
+}
+
+body .markdown-rendered h2, body .markdown-rendered h3,
+body .markdown-rendered h4, body .markdown-rendered h5,
+body .markdown-rendered h6,
+body .markdown-source-view .cm-header-2,
+body .markdown-source-view .cm-header-3,
+body .markdown-source-view .cm-header-4,
+body .markdown-source-view .cm-header-5,
+body .markdown-source-view .cm-header-6 {
+  font-family: "Geist Mono", Consolas, monospace !important;
+}
+
+body .markdown-rendered h2,
+body .markdown-source-view .cm-header-2 {
+  color: #FF1493 !important;
+}
+
+body .markdown-rendered h3,
+body .markdown-source-view .cm-header-3 {
+  color: #F0C840 !important;
+}
+
+body .markdown-rendered h4,
+body .markdown-source-view .cm-header-4 {
+  color: #8A2BE2 !important;
+}
+
+body .markdown-rendered h5,
+body .markdown-source-view .cm-header-5 {
+  color: #FFA500 !important;
+}
+
+body .markdown-rendered h6,
+body .markdown-source-view .cm-header-6 {
+  color: #FF7F50 !important;
+}
+
+body .markdown-rendered a,
+body .markdown-source-view .cm-link,
+body .markdown-source-view .cm-url,
+body .markdown-source-view .cm-hmd-internal-link {
+  color: #40E0D0 !important;
+}
+
+body .markdown-rendered strong,
+body .markdown-source-view .cm-strong {
+  color: #F0C840 !important;
+}
+
+body .markdown-rendered em,
+body .markdown-source-view .cm-em {
+  color: #F0C840 !important;
+}
+
+body .markdown-rendered code:not(pre code),
+body .markdown-source-view .cm-inline-code {
+  color: #8A2BE2 !important;
+
+}
+
+/* Code blocks */
+body .markdown-rendered pre code,
+body .markdown-source-view .HyperMD-codeblock {
+  color: #8A2BE2 !important;
+
+}
+body .markdown-rendered blockquote {
+  border-left-color: #40E0D0 !important;
+}
+
+body .markdown-rendered hr,
+body .markdown-rendered hr::after,
+body .markdown-rendered hr::before {
+  border-color: #FF1493 !important;
+  background-color: #FF1493 !important;
+  color: #FF1493 !important;
+}
+
+body .markdown-source-view .cm-hr {
+  color: #FF1493 !important;
+}
+
+body .markdown-rendered ul > li::marker {
+  color: #8A2BE2 !important;
+}
+
+body .markdown-rendered ol > li::marker {
+  color: #8A2BE2 !important;
+}
+
+/* List formatting markers - source view */
+body .markdown-source-view .cm-formatting-list-ul,
+body .markdown-source-view .cm-formatting-list-ol {
+  color: #8A2BE2 !important;
+}
+
+/* Bullet dots - override AnuPpuccin via CSS variable */
+body {
+  --list-marker-color: #8A2BE2 !important;
+  --list-bullet-color: #8A2BE2 !important;
+}
+
+/* Sidebar - active file/folder highlight */
+body .nav-file-title.is-active,
+body .nav-folder-title.is-active {
+  color: #40E0D0 !important;
+  background-color: rgba(64, 224, 208, 0.1) !important;
+}
+
+/* Sidebar - hovered file/folder (not active) */
+body .nav-file-title:hover:not(.is-active),
+body .nav-folder-title:hover:not(.is-active) {
+  color: var(--nav-item-color) !important;
+  background-color: rgba(64, 224, 208, 0.08) !important;
+}
+
+/* Sidebar - folder collapse arrows and tree lines */
+body .nav-folder-collapse-indicator,
+body .collapse-icon,
+body .tree-item-icon,
+body .nav-folder-collapse-indicator svg,
+body .collapse-icon svg {
+  color: #FF1493 !important;
+}
+
+/* Sidebar - folder indentation lines */
+body .nav-folder-children .nav-file-title,
+body .nav-folder-children .nav-folder-title {
+  border-left-color: #FF1493 !important;
+}
+
+body .tree-item-children {
+  border-left-color: #FF1493 !important;
+}
+
+body .nav-folder-children {
+  border-left-color: #FF1493 !important;
+  --nav-indentation-guide-color: #FF1493 !important;
+}
+
+/* Scrollbar - turquoise */
+body {
+  --scrollbar-thumb-bg: #40E0D0 !important;
+  --scrollbar-active-thumb-bg: #33B3A6 !important;
+}
+
+* {
+  scrollbar-color: #40E0D0 transparent !important;
+}
+
+/* Sidebar toggle button - deeppink */
+body .sidebar-toggle-button {
+  color: #FF1493 !important;
+  border-color: #FF1493 !important;
+}
+
+/* Text cursor - turquoise */
+body .cm-editor .cm-cursorLayer .cm-cursor,
+body .cm-editor .cm-cursorLayer .cm-cursor-primary {
+  border-left-color: #40E0D0 !important;
+  caret-color: #40E0D0 !important;
+}
+
+body .cm-editor .cm-content {
+  caret-color: #40E0D0 !important;
+}
+
+/* Other sidebar icons - turquoise */
+body .clickable-icon,
+body .workspace-tab-header-icon {
+  color: #40E0D0 !important;
+}

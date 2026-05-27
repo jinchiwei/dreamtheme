@@ -1,0 +1,28 @@
+name: "Jellyfish DM"
+background: "#1b1718"
+accent: "#FF0082"
+cursor: "#00FFFF"
+foreground: "#ffffff"
+background_image:
+  path: /Users/jinchiwei/.warp/themes/jellyfish_bg.jpg
+  opacity: 30
+details: darker
+terminal_colors:
+  normal:
+    black: "#616161"
+    red: "#EE5D43"
+    green: "#96E072"
+    yellow: "#FFE66D"
+    blue: "#7CB7FF"
+    magenta: "#FF00AA"
+    cyan: "#00E8C6"
+    white: "#f1f1f1"
+  bright:
+    black: "#8e8e8e"
+    red: "#EE5D43"
+    green: "#96E072"
+    yellow: "#FFE66D"
+    blue: "#C74DED"
+    magenta: "#FF00AA"
+    cyan: "#00E8C6"
+    white: "#feffff"

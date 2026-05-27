@@ -1,0 +1,134 @@
+// dreamtheme — Jinchi's branded theme for zellij (component-based spec, zellij 0.40+).
+// Palette: turquoise #40E0D0 (primary), deeppink #FF1493, amber #F0C840,
+// blueviolet #8A2BE2, on ink canvas #14141C with off-white #E5E5EA text.
+// Note: fonts (Geist Mono) are controlled by the terminal, not zellij.
+// Each style block requires base, background, and emphasis_0..3.
+themes {
+    dreamtheme {
+        // Normal text: off-white on ink, brand accents as emphasis slots.
+        text_unselected {
+            base "#E5E5EA"
+            background "#14141C"
+            emphasis_0 "#40E0D0"   // turquoise
+            emphasis_1 "#F0C840"   // amber
+            emphasis_2 "#FF1493"   // deeppink
+            emphasis_3 "#8A2BE2"   // blueviolet
+        }
+        // Selected text (e.g. highlighted in a prompt): ink on turquoise.
+        text_selected {
+            base "#14141C"
+            background "#40E0D0"
+            emphasis_0 "#FF1493"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#8A2BE2"
+            emphasis_3 "#E5E5EA"
+        }
+        // Active tab / mode ribbon: ink on turquoise (the focused thing).
+        ribbon_selected {
+            base "#14141C"
+            background "#40E0D0"
+            emphasis_0 "#FF1493"
+            emphasis_1 "#8A2BE2"
+            emphasis_2 "#F0C840"
+            emphasis_3 "#E5E5EA"
+        }
+        // Inactive tabs / ribbons: muted off-white on surface grey.
+        ribbon_unselected {
+            base "#E5E5EA"
+            background "#2B2B32"
+            emphasis_0 "#40E0D0"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#FF1493"
+            emphasis_3 "#8A2BE2"
+        }
+        // Focused pane border: turquoise. Highlight (rename/search): deeppink.
+        frame_selected {
+            base "#40E0D0"
+            background "#14141C"
+            emphasis_0 "#FF1493"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#8A2BE2"
+            emphasis_3 "#E5E5EA"
+        }
+        frame_highlight {
+            base "#FF1493"
+            background "#14141C"
+            emphasis_0 "#F0C840"
+            emphasis_1 "#40E0D0"
+            emphasis_2 "#8A2BE2"
+            emphasis_3 "#E5E5EA"
+        }
+        // Command exit status.
+        exit_code_success {
+            base "#40E0D0"
+            background "#14141C"
+            emphasis_0 "#F0C840"
+            emphasis_1 "#8A2BE2"
+            emphasis_2 "#FF1493"
+            emphasis_3 "#E5E5EA"
+        }
+        exit_code_error {
+            base "#FF1493"
+            background "#14141C"
+            emphasis_0 "#F0C840"
+            emphasis_1 "#8A2BE2"
+            emphasis_2 "#40E0D0"
+            emphasis_3 "#E5E5EA"
+        }
+        // Tables (e.g. session manager): amber titles, turquoise selection.
+        table_title {
+            base "#F0C840"
+            background "#14141C"
+            emphasis_0 "#40E0D0"
+            emphasis_1 "#FF1493"
+            emphasis_2 "#8A2BE2"
+            emphasis_3 "#E5E5EA"
+        }
+        table_cell_selected {
+            base "#14141C"
+            background "#40E0D0"
+            emphasis_0 "#FF1493"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#8A2BE2"
+            emphasis_3 "#E5E5EA"
+        }
+        table_cell_unselected {
+            base "#E5E5EA"
+            background "#14141C"
+            emphasis_0 "#40E0D0"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#FF1493"
+            emphasis_3 "#8A2BE2"
+        }
+        // Lists (e.g. file/strider, session list).
+        list_selected {
+            base "#14141C"
+            background "#40E0D0"
+            emphasis_0 "#FF1493"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#8A2BE2"
+            emphasis_3 "#E5E5EA"
+        }
+        list_unselected {
+            base "#E5E5EA"
+            background "#14141C"
+            emphasis_0 "#40E0D0"
+            emphasis_1 "#F0C840"
+            emphasis_2 "#FF1493"
+            emphasis_3 "#8A2BE2"
+        }
+        // Multiplayer cursors cycle through the brand 4 then variations.
+        multiplayer_user_colors {
+            player_1 "#40E0D0"
+            player_2 "#FF1493"
+            player_3 "#F0C840"
+            player_4 "#8A2BE2"
+            player_5 "#5EEAD4"
+            player_6 "#FBCFE8"
+            player_7 "#A78BFA"
+            player_8 "#E5E5EA"
+            player_9 "#40E0D0"
+            player_10 "#FF1493"
+        }
+    }
+}

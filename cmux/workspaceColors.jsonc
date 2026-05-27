@@ -1,0 +1,20 @@
+// dreamtheme — cmux (com.cmuxterm.app)
+//
+// cmux has no standalone theme file; branding lives inside ~/.config/cmux/cmux.json.
+// The active branded block is `workspaceColors` (turquoise selection + badge).
+// Merge this block into your cmux.json.
+{
+  "workspaceColors": {
+    "selectionColor": "#00ced1",
+    "notificationBadgeColor": "#00ced1",
+    "indicatorStyle": "leftRail"
+  }
+}
+
+// CAVEATS (learned the hard way — see kb learnings 2026-05-21 / 2026-05-22):
+//  - The Dock APP ICON cannot be customized (signed bundle + asset-catalog
+//    icon + the running app paints its own Dock icon). Don't bother retrying.
+//  - The sidebar gradient only disappears with `matchTerminalBackground: true`.
+//    The plist (~/Library/Preferences/com.cmuxterm.app.plist) is authoritative
+//    for sidebar appearance; the cmux.json `sidebarAppearance` block is inert.
+//  - #00ced1 is "darkturquoise", the brand-adjacent turquoise cmux accepts here.
