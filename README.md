@@ -20,6 +20,19 @@ Supplementary (midnight) hues used in a few places: `#5EEAD4`, `#FBCFE8`, `#A78B
 Fonts: **Geist** (sans) / **Geist Mono** (mono). Note: fonts are set by each app/
 terminal, not by the theme files — the theme files only control color.
 
+## Install
+
+On any machine with your GitHub access:
+
+```bash
+git clone git@github.com:jinchiwei/dreamtheme.git ~/dreamtheme   # or: cd ~/dreamtheme && git pull
+cd ~/dreamtheme && ./install.sh            # symlinks drop-in themes (--copy to copy instead)
+```
+
+`install.sh` symlinks the drop-in themes into place (backing up any existing file to
+`.bak`), then prints the per-tool **activate** lines and the **manual-merge** steps for
+the snippet-based tools (cmux, vscode, anki, obsidian). Symlinks auto-update on `git pull`.
+
 ## What's here
 
 | Tool | File(s) | Install |
