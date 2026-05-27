@@ -35,7 +35,7 @@ place "$DT/btop/dreamtheme.theme"        "$HOME/.config/btop/themes/dreamtheme.t
 # Warp: copy the yaml + bg image, and fix the bg image path to THIS machine's home.
 mkdir -p "$HOME/.warp/themes"
 place "$DT/warp/jellyfish_bg.jpg"        "$HOME/.warp/themes/jellyfish_bg.jpg"
-sed "s|/Users/[^/]*/.warp/themes/jellyfish_bg.jpg|$HOME/.warp/themes/jellyfish_bg.jpg|" \
+sed -E "s|^([[:space:]]*path: ).*jellyfish_bg.jpg|\1$HOME/.warp/themes/jellyfish_bg.jpg|" \
     "$DT/warp/Jellyfish DM.yaml" > "$HOME/.warp/themes/Jellyfish DM.yaml"
 echo "  copy: $HOME/.warp/themes/Jellyfish DM.yaml (bg path patched)"
 

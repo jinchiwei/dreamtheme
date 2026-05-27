@@ -4,7 +4,7 @@ accent: "#FF0082"
 cursor: "#00FFFF"
 foreground: "#ffffff"
 background_image:
-  path: /Users/jinchiwei/.warp/themes/jellyfish_bg.jpg
+  path: ~/.warp/themes/jellyfish_bg.jpg
   opacity: 30
 details: darker
 terminal_colors:

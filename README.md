@@ -1,67 +1,81 @@
-# dreamtheme
+<div align="center">
 
-Jinchi's personal brand theme, collected across every tool that supports theming.
-One name, one palette, everywhere.
+# 🌙 dreamtheme
+
+**One brand palette, every tool.** Jinchi's personal theme — collected across
+the terminal, the editor, the multiplexer, and everything in between.
+
+<img src="assets/palette.png" alt="dreamtheme palette" width="640">
+
+</div>
 
 ## Palette
 
-| Role | Color | Hex |
-|---|---|---|
-| Primary / focused | turquoise | `#40E0D0` |
-| Accent | deeppink | `#FF1493` |
-| Accent | amber | `#F0C840` |
-| Accent | blueviolet | `#8A2BE2` |
-| Canvas (dark) | ink | `#14141C` |
-| Text | off-white | `#E5E5EA` |
-| Surface | grey | `#2B2B32` |
+| | Color | Hex | Role |
+|:--:|:--|:--|:--|
+| <img src="assets/swatch_turquoise.png" width="22"> | **turquoise** | `#40E0D0` | primary · focus · selection |
+| <img src="assets/swatch_deeppink.png" width="22"> | **deeppink** | `#FF1493` | accent · highlights · errors |
+| <img src="assets/swatch_amber.png" width="22"> | **amber** | `#F0C840` | accent · warnings |
+| <img src="assets/swatch_blueviolet.png" width="22"> | **blueviolet** | `#8A2BE2` | accent · gradient midpoint |
+| <img src="assets/swatch_ink.png" width="22"> | **ink** | `#14141C` | canvas (dark) |
+| <img src="assets/swatch_offwhite.png" width="22"> | **off-white** | `#E5E5EA` | text |
+| <img src="assets/swatch_surface.png" width="22"> | **surface** | `#2B2B32` | panels · separators |
 
-Supplementary (midnight) hues used in a few places: `#5EEAD4`, `#FBCFE8`, `#A78BFA`.
+<details>
+<summary>Supplementary (midnight) hues</summary>
 
-Fonts: **Geist** (sans) / **Geist Mono** (mono). Note: fonts are set by each app/
-terminal, not by the theme files — the theme files only control color.
+| | Color | Hex |
+|:--:|:--|:--|
+| <img src="assets/swatch_teal2.png" width="22"> | teal | `#5EEAD4` |
+| <img src="assets/swatch_pink2.png" width="22"> | pink | `#FBCFE8` |
+| <img src="assets/swatch_lavender.png" width="22"> | lavender | `#A78BFA` |
+
+</details>
+
+**Fonts:** [Geist](https://vercel.com/font) (sans) / Geist Mono (mono). Fonts are set
+by each app/terminal — the theme files only control color.
 
 ## Install
 
-On any machine with your GitHub access:
+On any machine:
 
 ```bash
-git clone git@github.com:jinchiwei/dreamtheme.git ~/dreamtheme   # or: cd ~/dreamtheme && git pull
-cd ~/dreamtheme && ./install.sh            # symlinks drop-in themes (--copy to copy instead)
+git clone https://github.com/jinchiwei/dreamtheme.git ~/dreamtheme   # or: cd ~/dreamtheme && git pull
+cd ~/dreamtheme && ./install.sh          # symlink drop-in themes (--copy to copy instead)
 ```
 
 `install.sh` symlinks the drop-in themes into place (backing up any existing file to
-`.bak`), then prints the per-tool **activate** lines and the **manual-merge** steps for
-the snippet-based tools (cmux, vscode, anki, obsidian). Symlinks auto-update on `git pull`.
+`.bak`), patches the Warp background-image path to your home, then prints the per-tool
+**activate** lines and the **manual-merge** steps for the snippet-based tools. Symlinks
+auto-update on `git pull`.
 
-## What's here
+## Supported apps
 
-| Tool | File(s) | Install |
-|---|---|---|
-| **zellij** | `zellij/dreamtheme.kdl` | → `~/.config/zellij/themes/`, set `theme "dreamtheme"` in `config.kdl` |
+| App | File(s) | Install / activate |
+|:--|:--|:--|
+| **zellij** | `zellij/dreamtheme.kdl` | → `~/.config/zellij/themes/`, set `theme "dreamtheme"` |
 | **vim** | `vim/dreamTheme.vim`, `vim/dreamThemeArc.vim` | → `~/.vim/colors/`, `:colorscheme dreamTheme` |
-| **ranger** | `ranger/dreamtheme.py` | → `~/.config/ranger/colorschemes/`, `set colorscheme dreamtheme` in `rc.conf` |
-| **glow** | `glow/dreamtheme.json` | → `~/.config/glow/`, `glow -s dreamtheme.json` (or set in config) |
+| **ranger** | `ranger/dreamtheme.py` | → `~/.config/ranger/colorschemes/`, `set colorscheme dreamtheme` |
+| **glow** | `glow/dreamtheme.json` | → `~/.config/glow/`, `glow -s dreamtheme.json` |
 | **television** | `television/dreamtheme.toml` | → `~/.config/television/themes/` |
 | **yazi** | `yazi/dreamtheme.toml` | → `~/.config/yazi/theme.toml` |
-| **obsidian** | `obsidian/dreamtheme.css` | → `<vault>/.obsidian/snippets/dreamtheme.css`, enable in Appearance → CSS snippets |
-| **warp** | `warp/Jellyfish DM.yaml` + `warp/jellyfish_bg.jpg` | → `~/.warp/themes/` (the yaml references the jpg by absolute path — fix the path to your home) |
-| **cmux** | `cmux/workspaceColors.jsonc` | merge the block into `~/.config/cmux/cmux.json` (see file for app-icon / sidebar caveats) |
-| **vscode** | `vscode/colorCustomizations.jsonc` | merge into User `settings.json`; overrides on the "Andromeda Italic" base theme |
-| **anki** | `anki/recolor-config.json` | config for the **ReColor** add-on (id `688199788`); paste into the add-on's config |
-| **btop** | `btop/dreamtheme.theme` | → `~/.config/btop/themes/`, set `color_theme = "dreamtheme"` in `btop.conf` |
-| **visidata** | `visidata/dreamtheme.visidatarc` | → `~/.visidatarc` (or append to it) |
-| **zsh** | `zsh/dreamingmachine.zsh-theme` | → `~/.oh-my-zsh/custom/themes/`, set `ZSH_THEME="dreamingmachine"` |
-| **bash** | `bash/dreamtheme.bash` | `source` it from `~/.bashrc` (truecolor + 16-color variants) |
+| **btop** | `btop/dreamtheme.theme` | → `~/.config/btop/themes/`, `color_theme = "dreamtheme"` |
+| **visidata** | `visidata/dreamtheme.visidatarc` | → `~/.visidatarc` |
+| **zsh** | `zsh/dreamingmachine.zsh-theme` | → `~/.oh-my-zsh/custom/themes/`, `ZSH_THEME="dreamingmachine"` |
+| **bash** | `bash/dreamtheme.bash` | `source` it from `~/.bashrc` |
+| **obsidian** | `obsidian/dreamtheme.css` | → `<vault>/.obsidian/snippets/`, enable in Appearance |
+| **warp** | `warp/Jellyfish DM.yaml` + `jellyfish_bg.jpg` | → `~/.warp/themes/`, pick in Settings → Appearance |
+| **cmux** | `cmux/workspaceColors.jsonc` | merge into `~/.config/cmux/cmux.json` |
+| **vscode** | `vscode/colorCustomizations.jsonc` | merge into User `settings.json` (overrides on Andromeda Italic) |
+| **anki** | `anki/recolor-config.json` | paste into the **ReColor** add-on config (id `688199788`) |
 
 ## Notes
 
-- **zellij, vim, ranger, glow, television, yazi, obsidian** are clean drop-in theme
-  files. **warp, cmux, vscode, anki** are app-specific (a base-theme override, a
-  config snippet, or an add-on config) rather than standalone files.
-- Several of these are also wired into [`jinchiwei/dotfiles`](https://github.com/jinchiwei/dotfiles)
-  via `./install.sh` (zellij, glow, television, yazi, ranger, vim). This repo is the
-  canonical, tool-agnostic collection; dotfiles handles symlinking the subset it manages.
-- **zsh** keeps its existing filename `dreamingmachine.zsh-theme` (oh-my-zsh and `zshrc`
-  reference it by that name); it's the brand's zsh theme.
-- **btop** and **visidata** themes were built fresh from the brand palette (no prior
-  branded config existed). btop gradients run cool→hot (turquoise→amber→deeppink).
+- **Drop-in** (zellij, vim, ranger, glow, television, yazi, btop, visidata, zsh, warp)
+  install automatically. **Merge-only** (cmux, vscode, anki, obsidian) are snippets you
+  paste into existing configs — no installer can safely splice those.
+- **btop** gradients run turquoise → blueviolet → deeppink (cool → hot), deliberately
+  avoiding green/yellow blends. Amber appears only as a solid outline.
+- **zsh** keeps the filename `dreamingmachine.zsh-theme` (oh-my-zsh references it by name).
+- Six of these are also symlinked by [`jinchiwei/dotfiles`](https://github.com/jinchiwei/dotfiles)
+  `./install.sh`; this repo is the canonical, tool-agnostic collection.
