@@ -27,39 +27,42 @@ theme[net_box]="#FF1493"
 theme[proc_box]="#8A2BE2"
 theme[proc_misc]="#40E0D0"
 
-# CPU gradient: cool turquoise -> amber -> hot deeppink
+# All gradients run turquoise -> blueviolet -> deeppink (cool -> hot).
+# blueviolet is the midpoint so the blend never crosses green/yellow.
+
+# CPU gradient
 theme[cpu_start]="#40E0D0"
-theme[cpu_mid]="#F0C840"
+theme[cpu_mid]="#8A2BE2"
 theme[cpu_end]="#FF1493"
 
-# Temperature gradient: same cool->hot ramp
+# Temperature gradient
 theme[temp_start]="#40E0D0"
-theme[temp_mid]="#F0C840"
+theme[temp_mid]="#8A2BE2"
 theme[temp_end]="#FF1493"
 
-# Memory "used" gradient (more used = hotter)
+# Memory: used = turquoise->deeppink; free/available mirror (deeppink->turquoise)
 theme[used_start]="#40E0D0"
-theme[used_mid]="#F0C840"
+theme[used_mid]="#8A2BE2"
 theme[used_end]="#FF1493"
 theme[free_start]="#FF1493"
-theme[free_mid]="#F0C840"
+theme[free_mid]="#8A2BE2"
 theme[free_end]="#40E0D0"
-theme[cached_start]="#8A2BE2"
-theme[cached_mid]="#A78BFA"
-theme[cached_end]="#40E0D0"
+theme[cached_start]="#40E0D0"
+theme[cached_mid]="#8A2BE2"
+theme[cached_end]="#FF1493"
 theme[available_start]="#FF1493"
-theme[available_mid]="#F0C840"
+theme[available_mid]="#8A2BE2"
 theme[available_end]="#40E0D0"
 
-# Network download = turquoise ramp, upload = deeppink ramp
-theme[download_start]="#5EEAD4"
-theme[download_mid]="#40E0D0"
-theme[download_end]="#8A2BE2"
-theme[upload_start]="#FBCFE8"
-theme[upload_mid]="#FF1493"
-theme[upload_end]="#8A2BE2"
+# Network: download turquoise->deeppink, upload mirrored (so up/down differ)
+theme[download_start]="#40E0D0"
+theme[download_mid]="#8A2BE2"
+theme[download_end]="#FF1493"
+theme[upload_start]="#FF1493"
+theme[upload_mid]="#8A2BE2"
+theme[upload_end]="#40E0D0"
 
-# Process gradient: blueviolet -> deeppink
-theme[process_start]="#8A2BE2"
-theme[process_mid]="#FF1493"
-theme[process_end]="#F0C840"
+# Process gradient
+theme[process_start]="#40E0D0"
+theme[process_mid]="#8A2BE2"
+theme[process_end]="#FF1493"
