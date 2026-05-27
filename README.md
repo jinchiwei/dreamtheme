@@ -35,6 +35,10 @@ terminal, not by the theme files — the theme files only control color.
 | **cmux** | `cmux/workspaceColors.jsonc` | merge the block into `~/.config/cmux/cmux.json` (see file for app-icon / sidebar caveats) |
 | **vscode** | `vscode/colorCustomizations.jsonc` | merge into User `settings.json`; overrides on the "Andromeda Italic" base theme |
 | **anki** | `anki/recolor-config.json` | config for the **ReColor** add-on (id `688199788`); paste into the add-on's config |
+| **btop** | `btop/dreamtheme.theme` | → `~/.config/btop/themes/`, set `color_theme = "dreamtheme"` in `btop.conf` |
+| **visidata** | `visidata/dreamtheme.visidatarc` | → `~/.visidatarc` (or append to it) |
+| **zsh** | `zsh/dreamingmachine.zsh-theme` | → `~/.oh-my-zsh/custom/themes/`, set `ZSH_THEME="dreamingmachine"` |
+| **bash** | `bash/dreamtheme.bash` | `source` it from `~/.bashrc` (truecolor + 16-color variants) |
 
 ## Notes
 
@@ -44,4 +48,7 @@ terminal, not by the theme files — the theme files only control color.
 - Several of these are also wired into [`jinchiwei/dotfiles`](https://github.com/jinchiwei/dotfiles)
   via `./install.sh` (zellij, glow, television, yazi, ranger, vim). This repo is the
   canonical, tool-agnostic collection; dotfiles handles symlinking the subset it manages.
-- btop currently uses a third-party theme (`kyli0x`), not a dreamtheme — not included.
+- **zsh** keeps its existing filename `dreamingmachine.zsh-theme` (oh-my-zsh and `zshrc`
+  reference it by that name); it's the brand's zsh theme.
+- **btop** and **visidata** themes were built fresh from the brand palette (no prior
+  branded config existed). btop gradients run cool→hot (turquoise→amber→deeppink).

@@ -1,0 +1,65 @@
+# dreamtheme — btop++
+# Jinchi brand palette: turquoise #40E0D0, deeppink #FF1493, amber #F0C840,
+# blueviolet #8A2BE2, on ink #14141C with off-white #E5E5EA.
+# Install: cp to ~/.config/btop/themes/dreamtheme.theme, then set
+#   color_theme = "dreamtheme"  in ~/.config/btop/btop.conf
+
+# Main background / foreground
+theme[main_bg]="#14141C"
+theme[main_fg]="#E5E5EA"
+
+# Title + highlight
+theme[title]="#40E0D0"
+theme[hi_fg]="#FF1493"
+theme[inactive_fg]="#5A5A66"
+theme[graph_text]="#E5E5EA"
+theme[meter_bg]="#2B2B32"
+theme[div_line]="#2B2B32"
+
+# Selected (menu / process highlight): blueviolet bg, ink text
+theme[selected_bg]="#8A2BE2"
+theme[selected_fg]="#14141C"
+
+# Box outlines — one brand accent per box
+theme[cpu_box]="#40E0D0"
+theme[mem_box]="#F0C840"
+theme[net_box]="#FF1493"
+theme[proc_box]="#8A2BE2"
+theme[proc_misc]="#40E0D0"
+
+# CPU gradient: cool turquoise -> amber -> hot deeppink
+theme[cpu_start]="#40E0D0"
+theme[cpu_mid]="#F0C840"
+theme[cpu_end]="#FF1493"
+
+# Temperature gradient: same cool->hot ramp
+theme[temp_start]="#40E0D0"
+theme[temp_mid]="#F0C840"
+theme[temp_end]="#FF1493"
+
+# Memory "used" gradient (more used = hotter)
+theme[used_start]="#40E0D0"
+theme[used_mid]="#F0C840"
+theme[used_end]="#FF1493"
+theme[free_start]="#FF1493"
+theme[free_mid]="#F0C840"
+theme[free_end]="#40E0D0"
+theme[cached_start]="#8A2BE2"
+theme[cached_mid]="#A78BFA"
+theme[cached_end]="#40E0D0"
+theme[available_start]="#FF1493"
+theme[available_mid]="#F0C840"
+theme[available_end]="#40E0D0"
+
+# Network download = turquoise ramp, upload = deeppink ramp
+theme[download_start]="#5EEAD4"
+theme[download_mid]="#40E0D0"
+theme[download_end]="#8A2BE2"
+theme[upload_start]="#FBCFE8"
+theme[upload_mid]="#FF1493"
+theme[upload_end]="#8A2BE2"
+
+# Process gradient: blueviolet -> deeppink
+theme[process_start]="#8A2BE2"
+theme[process_mid]="#FF1493"
+theme[process_end]="#F0C840"

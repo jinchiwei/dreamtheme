@@ -1,0 +1,27 @@
+# dreamtheme — VisiData (vd)
+# Jinchi brand palette mapped to VisiData color options.
+# 256-color codes (universally supported) approximating the brand hex:
+#   turquoise #40E0D0 -> 44   deeppink #FF1493 -> 198   amber #F0C840 -> 220
+#   blueviolet #8A2BE2 -> 93   ink #14141C -> 233        off-white #E5E5EA -> 255
+#   surface #2B2B32 -> 236     muted -> 244
+#
+# Install: copy to ~/.visidatarc (or append to an existing one).
+
+options.color_default          = '255 on 233'        # off-white on ink
+options.color_current_row      = 'bold 232 on 44'    # ink on turquoise (cursor row)
+options.color_current_col      = '255 on 236'        # subtle surface highlight
+options.color_current_hdr      = 'bold 232 on 44'    # current column header
+options.color_key_col          = '44 bold'           # key columns: turquoise
+options.color_selected_row     = 'bold 198'          # selected rows: deeppink
+options.color_note_row         = '93'                # note rows: blueviolet
+options.color_hidden_col       = '244'               # muted grey
+options.color_column_sep       = '240'               # column separators
+options.color_edit_cell        = '232 on 220'        # editing: ink on amber
+
+options.color_status           = 'bold 232 on 44'    # status line: ink on turquoise
+options.color_active_status    = 'bold 232 on 44'
+options.color_inactive_status  = '255 on 236'
+options.color_keystrokes       = '93 bold'           # keystrokes: blueviolet
+options.color_error            = 'bold 198'          # errors: deeppink
+options.color_warning          = '220'               # warnings: amber
+options.color_working          = '44'                # spinner / working: turquoise
