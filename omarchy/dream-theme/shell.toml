@@ -1,0 +1,79 @@
+# Sparse primary cyan; the palette's general accent remains secondary pink.
+[bar]
+background = "#1a1b26"
+text = "#a9b1d6"
+active = "#F0C840"
+background-alpha = 0.85
+[hyprland]
+active-border = "#00E8C6"
+active-border-foreground = "#E6E8F0"
+[controls]
+hover-cursor-color = "#FF1493"
+hover-cursor-border = "#FF1493"
+hover-cursor-fill-alpha = 0.08
+focus-color = "#00E8C6"
+focus-border = "#00E8C6"
+focus-border-width = 1
+focus-border-alpha = 1.0
+selected-color = "#FF1493"
+selected-border = "#FF1493"
+[notifications]
+border = "#FF1493"
+countdown = "#F0C840"
+background-alpha = 1.0
+[tooltip]
+border = "#BF40FF"
+background-alpha = 0.97
+[launcher]
+selected-text = "#00e8c6"
+background-alpha = 0.95
+scrim-alpha = 0.5
+border = "#00E8C6"
+[menu]
+selected-text = "#00e8c6"
+background-alpha = 1.0
+scrim-alpha = 0.5
+border = "#00E8C6"
+[popups]
+background = "#1a1b26"
+text = "#a9b1d6"
+border = "#00e8c6"
+background-alpha = 0.985
+[polkit]
+accent = "#00e8c6"
+border = "#00e8c6"
+text-error = "#FF7F50"
+border-error = "#FF7F50"
+# Preserve the existing lock screen palette; machine overrides still win.
+background-alpha = 1.0
+scrim-alpha = 0.5
+[lock]
+cursor = "#27E5D9"
+background = "#000000"
+background-alpha = 0.8
+text = "#E6E8F0"
+placeholder = "#7A7F99"
+border = "#27E5D9"
+border-active = "#27E5D9"
+border-error = "#FF7F50"
+text-error = "#FF7F50"
+border-alpha = 1.0
+selection = "#7AA2F7"
+selection-alpha = 0.45
+
+[image-picker]
+scrim-alpha = 0.5
+
+# Primary panel headings and identity labels.
+[panels]
+heading = "#00E8C6"
+limit-exhausted = "#FF1493"
+limit-icon-active = "#FF1493"
+
+# Herdr: primary title/completion, working state, and inherited urgency/controls.
+[herdr]
+heading = "#00E8C6"
+done = "#00E8C6"
+working = "#FF1493"
+badge_working = "#00E8C6"
+hover = "#FF1493"

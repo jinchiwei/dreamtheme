@@ -1,0 +1,37 @@
+palette = 0=#23262e
+palette = 1=#ee5d43
+palette = 2=#96e072
+palette = 3=#ffe66d
+# Original Andromeda blue: palette = 4=#7cb7ff
+# Previous softer turquoise: palette = 4=#58c4d8
+# Previous vibrant turquoise: palette = 4=#20d6ed
+palette = 4=#36cfc5
+palette = 5=#ff00aa
+palette = 6=#00e8c6
+palette = 7=#d5ced9
+palette = 8=#a0a1a7
+palette = 9=#ee5d43
+palette = 10=#96e072
+palette = 11=#ffe66d
+palette = 12=#c74ded
+palette = 13=#ff00aa
+palette = 14=#00e8c6
+palette = 15=#ffffff
+background = #1b1718
+foreground = #d5ced9
+cursor-color = #00e8c6
+cursor-text = #23262e
+selection-background = #5a5c62
+selection-foreground = #ece7e7
+
+# --- background image (Ghostty 1.2.0+).
+#     The wallpaper ships with this repo (config/ghostty/wallpapers/), so there
+#     is nothing to download. {{DOTFILES}} is substituted with the real repo
+#     path by install.sh, which writes this file rather than symlinking it —
+#     Ghostty needs an absolute path here and the repo location varies by
+#     machine. Edit the copy in the repo, then re-run ./install.sh ghostty.
+background-image = {{DREAMTHEME}}/warp/jellyfish_bg.jpg
+background-image-opacity = 0.30
+background-image-fit = cover
+background-image-position = center
+background-image-repeat = false

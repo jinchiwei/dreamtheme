@@ -31,6 +31,38 @@ place "$DT/glow/dreamtheme.json"         "$HOME/.config/glow/dreamtheme.json"
 place "$DT/television/dreamtheme.toml"   "$HOME/.config/television/themes/dreamtheme.toml"
 place "$DT/yazi/dreamtheme.toml"         "$HOME/.config/yazi/theme.toml"
 place "$DT/btop/dreamtheme.theme"        "$HOME/.config/btop/themes/dreamtheme.theme"
+place "$DT/vim/airline/dreamtheme.vim"   "$HOME/.vim/autoload/airline/themes/dreamtheme.vim"
+
+# Neovim (LazyVim): only when a config already exists. Skipped when colors/ is a
+# symlink, because another repo manages it and placing files would write into that repo.
+if [ -d "$HOME/.config/nvim" ] && [ ! -L "$HOME/.config/nvim/colors" ]; then
+    place "$DT/vim/dreamTheme.vim"          "$HOME/.config/nvim/colors/dreamTheme.vim"
+    place "$DT/vim/dreamThemeArc.vim"       "$HOME/.config/nvim/colors/dreamThemeArc.vim"
+    place "$DT/nvim/user-colorscheme.lua"   "$HOME/.config/nvim/lua/plugins/user-colorscheme.lua"
+    place "$DT/nvim/lualine/dreamTheme.lua" "$HOME/.config/nvim/lua/lualine/themes/dreamTheme.lua"
+else
+    echo "  skip: neovim (no ~/.config/nvim, or its colors/ is managed by another repo)"
+fi
+
+# Ghostty: written rather than linked, because background-image needs an absolute
+# path and this repo's location differs per machine.
+if [ -d "$HOME/.config/ghostty" ]; then
+    gdst="$HOME/.config/ghostty/themes/Andromeda"
+    mkdir -p "$(dirname "$gdst")"
+    if [ -L "$gdst" ]; then rm "$gdst"
+    elif [ -e "$gdst" ]; then echo "  backup: $gdst -> ${gdst}.bak"; mv "$gdst" "${gdst}.bak"; fi
+    sed "s|{{DREAMTHEME}}|$DT|g" "$DT/ghostty/Andromeda" > "$gdst"
+    echo "  copy: $gdst (background path patched)"
+else
+    echo "  skip: ghostty (no ~/.config/ghostty)"
+fi
+
+# Herdr: the file is the whole config, so never replace an existing one.
+if [ ! -e "$HOME/.config/herdr/config.toml" ]; then
+    place "$DT/herdr/config.toml" "$HOME/.config/herdr/config.toml"
+else
+    echo "  skip: ~/.config/herdr/config.toml exists — merge the [theme] blocks from herdr/config.toml yourself"
+fi
 
 # Warp: copy the yaml + bg image, and fix the bg image path to THIS machine's home.
 mkdir -p "$HOME/.warp/themes"
@@ -56,7 +88,10 @@ cat <<EOF
 === Activate (set these in each tool's own config) ===
   zellij      theme "dreamtheme"            in ~/.config/zellij/config.kdl
   btop        color_theme = "dreamtheme"    in ~/.config/btop/btop.conf
-  vim         :colorscheme dreamTheme       (or in ~/.vimrc)
+  vim         :colorscheme dreamTheme       (or in ~/.vimrc); airline: let g:airline_theme='dreamtheme'
+  neovim      restart nvim; check with      :echo g:colors_name
+  ghostty     theme = Andromeda             in ~/.config/ghostty/config (see ghostty/config for the rest)
+  herdr       herdr server reload-config
   ranger      set colorscheme dreamtheme    in ~/.config/ranger/rc.conf
   television  theme = "dreamtheme"          in ~/.config/television/config.toml
   zsh         ZSH_THEME="dreamingmachine"   in ~/.zshrc
@@ -69,6 +104,11 @@ cat <<EOF
   vscode      merge vscode/colorCustomizations.jsonc  into User settings.json
   anki        paste anki/recolor-config.json          into the ReColor add-on config
   obsidian    cp obsidian/dreamtheme.css  <vault>/.obsidian/snippets/  (then enable it)
+  ghostty     merge ghostty/config (font, palette, selection) into ~/.config/ghostty/config
+  herdr-app   cp herdr-app/dreamtheme.json ~/.config/herdr-app/themes/  then:
+              herdr-app do app.theme '{"name":"dreamtheme"}'
+  moshi       Settings → Theme → Import theme: moshi/dreamtheme.json (or the clipboard string / QR)
+  omarchy     cp omarchy/dream-theme/shell.toml ~/.config/omarchy/themes/dream-theme/
 EOF
 echo ""
 echo "Done."

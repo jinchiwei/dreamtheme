@@ -1,96 +1,76 @@
 {
   "document": {
-    "block_prefix": "",
-    "block_suffix": "\n",
+    "color": "#eee",
     "margin": 2
   },
   "heading": {
-    "block_suffix": "\n",
+    "color": "#40E0D0",
     "bold": true
   },
   "h1": {
-    "prefix": "# ",
-    "suffix": "",
+    "color": "#40E0D0",
     "bold": true,
-    "color": "51"
+    "prefix": "# "
   },
   "h2": {
-    "prefix": "## ",
-    "suffix": "",
+    "color": "#FF1493",
     "bold": true,
-    "color": "198"
+    "prefix": "## "
   },
   "h3": {
-    "prefix": "### ",
-    "suffix": "",
+    "color": "#FFD700",
     "bold": true,
-    "color": "220"
+    "prefix": "### "
   },
   "h4": {
-    "prefix": "#### ",
-    "suffix": "",
+    "color": "#8A2BE2",
     "bold": true,
-    "color": "135"
+    "prefix": "#### "
   },
   "h5": {
-    "bold": true,
-    "color": "135"
+    "color": "#8A2BE2",
+    "bold": true
   },
   "h6": {
-    "bold": true,
-    "color": "135"
-  },
-  "text": {},
-  "strikethrough": {
-    "crossed_out": true
-  },
-  "strong": {
-    "bold": true,
-    "color": "220"
-  },
-  "emph": {
-    "italic": true,
-    "color": "198"
+    "color": "#8A2BE2",
+    "bold": true
   },
   "link": {
-    "color": "51",
+    "color": "#40E0D0",
     "underline": true
   },
   "link_text": {
-    "color": "51",
+    "color": "#40E0D0",
     "bold": true
   },
+  "strong": {
+    "color": "#FFD700",
+    "bold": true
+  },
+  "emph": {
+    "color": "#FF1493",
+    "italic": true
+  },
   "code": {
-    "color": "135"
+    "color": "#8A2BE2"
   },
   "code_block": {
-    "color": "249",
-    "margin": 2,
-    "chroma": {
-      "theme": "dracula"
-    }
+    "color": "#ddd",
+    "margin": 2
   },
   "list": {
-    "level_indent": 2,
-    "color": "51"
+    "color": "#eee",
+    "level_indent": 2
+  },
+  "horizontal_rule": {
+    "color": "#FF1493"
   },
   "block_quote": {
-    "indent": 1,
-    "indent_token": "│ ",
-    "color": "249"
+    "color": "#aaa",
+    "indent": 2,
+    "indent_token": "│ "
   },
-  "table": {},
-  "horizontal_rule": {
-    "color": "198",
-    "format": "─"
-  },
-  "item": {
-    "block_prefix": "• "
-  },
-  "enumeration": {
-    "block_prefix": ". "
-  },
-  "paragraph": {
-    "block_suffix": "\n"
+  "table": {
+    "color": "#eee"
   }
 }

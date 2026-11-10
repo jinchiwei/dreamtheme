@@ -1,0 +1,20 @@
+# GeistMono Nerd Font has the `liga` feature (plain Geist Mono does not), so
+# ligatures actually fire here; it also adds Nerd Font icon glyphs.
+font-family = GeistMono Nerd Font
+font-feature = calt
+font-feature = liga
+font-feature = ss01
+
+theme = Andromeda
+# Solid black background; remove to use Andromeda's original #1b1718.
+# Previous blue-gray trials: WWDC #292C36, darkened #22252D.
+background = #000000
+# Close turquoise blue, distinct from primary Andromeda cyan #00e8c6.
+# Original blue: #7cb7ff; previous vibrant turquoise: #20d6ed.
+palette = 4=#36cfc5
+
+selection-background = #ff0082
+selection-foreground = #d5ced9
+selection-invert-fg-bg = false
+
+split-divider-color = #ff1493

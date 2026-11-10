@@ -1,0 +1,38 @@
+onboarding = false
+# herdr configuration — Jinchi Wei
+# Docs: https://herdr.dev/docs/configuration/   Reload running server: `herdr server reload-config`
+#
+# This file holds TWO looks:
+#   • dreamtheme            = tokyo-night's deep base + personal palette  (ACTIVE)
+#   • faithful tokyo-night  = comment out the entire [theme.custom] block below
+
+[theme]
+name = "tokyo-night"          # faithful base — untouched unless [theme.custom] is present
+auto_switch = false           # set true to follow the terminal's light/dark
+dark_name  = "tokyo-night"
+light_name = "tokyo-night-day"
+
+# ─────────────────────── dreamtheme (personal color scheme) ───────────────────────
+# Comment out this whole block to get pristine, unmodified tokyo-night.
+[theme.custom]
+# Primary focus and online/ready status share cyan intentionally.
+accent = "#00E8C6"
+green = "#00E8C6"           # Online / idle-ready
+blue = "#FF70B7"            # Notifications: lighter pink than secondary labels
+mauve = "#BF40FF"           # Branch names / secondary labels
+teal = "#FF1493"            # Completed / newly finished work
+yellow = "#F0C840"          # Working / reconnecting
+red = "#FF7F50"             # Blocked / needs attention
+peach = "#FFA500"           # Interrupted / warning accent
+# Neutral text and dark surfaces avoid inherited periwinkle tones.
+text = "#E5E5EA"
+subtext0 = "#A0A0AB"
+overlay0 = "#73737E"        # Unknown / disabled / muted
+overlay1 = "#9696A1"
+panel_bg = "#0F0D1A"
+sidebar_bg = "reset"
+active_row_bg = "#242031"
+selection_bg = "#FF0082"     # Match Ghostty selection background
+surface0 = "#24212E"
+surface1 = "#3A3346"
+surface_dim = "#1C1926"
