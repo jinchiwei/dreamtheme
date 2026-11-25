@@ -174,7 +174,8 @@ precmd() { # cspell:disable-line
 }
 
 function is_dark_mode() {
-    [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]
+    # `defaults` is macOS-only; elsewhere it triggers command-not-found install prompts.
+    [[ "$OSTYPE" == darwin* && "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]
 }
 
 function phrase_color() {
